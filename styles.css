@@ -306,7 +306,23 @@
 .home-brand-partners-section .logo-chip{
   border-radius:18px;
 }
-
+.perks-hero h1 .gradient{
+  background:linear-gradient(90deg,var(--blue) 0%,#8adfff 25%,#ffc4da 58%,var(--pink) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.perks-how-section .step p{
+  padding-right:clamp(12px,2vw,28px);
+}
+.perks-use-heading{
+  max-width:190px;
+  padding-right:24px;
+}
+.perks-brand-section .brand-tile{
+  border-radius:18px;
+  overflow:hidden;
+}
 /* Responsive footer */
 @media(max-width:900px){
   .footer{padding:58px 0 30px}
@@ -329,10 +345,20 @@
 @media(max-width:560px){
   .section{padding:72px 0}
   .section-sm{padding:56px 0}
+  .perks-hero h1{font-size:clamp(42px,14vw,54px)}
+  .perks-hero h1 .gradient{white-space:nowrap}
   .home-experience-section .heading-row h2{
     max-width:100%;
     font-size:clamp(34px,10.5vw,42px);
     line-height:.98;
     letter-spacing:-.05em;
   }
+}
+@media(max-width:900px){
+  .perks-hero .hero-media{margin-top:34px}
+  .perks-hero .hero-media img.phone{max-width:100%;max-height:520px}
+  .perks-stats-section .heading-row{display:grid;grid-template-columns:1fr;align-items:start;gap:24px}
+  .perks-stats-section .heading-row>p{width:100%;max-width:none}
+  .perks-how-section .heading-row{display:grid;grid-template-columns:1fr;align-items:start;gap:24px}
+  .perks-how-section .heading-row .button-white{width:max-content}
 }
