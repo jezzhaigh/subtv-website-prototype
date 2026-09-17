@@ -267,6 +267,18 @@
   -webkit-text-fill-color:transparent;
   text-shadow:none;
 }
+.perks-app-stage>img{
+  right:36px;
+  bottom:0;
+  max-width:46%;
+  max-height:520px;
+  object-fit:contain;
+}
+.perks-app-stage{
+  background-image:linear-gradient(100deg,rgba(8,10,21,.94) 0%,rgba(13,14,30,.84) 48%,rgba(29,18,53,.72) 100%),url("assets/perks-leaderboard-campus.jpg");
+  background-size:cover;
+  background-position:center;
+}
 @media(max-width:900px){
   .home-blog-section .heading-row{
     display:grid;
@@ -323,6 +335,24 @@
   border-radius:18px;
   overflow:hidden;
 }
+.perks-value-section .photo-panel,
+.perks-value-section .photo-panel.alt{
+  background:radial-gradient(circle at 82% 18%,rgba(66,199,255,.28),transparent 34%),linear-gradient(145deg,#090c19 0%,#161a36 58%,#172c46 100%);
+  color:#fff;
+}
+.perks-value-section .photo-panel:nth-child(2){
+  background:radial-gradient(circle at 84% 14%,rgba(255,79,136,.4),transparent 34%),radial-gradient(circle at 8% 92%,rgba(123,62,242,.34),transparent 40%),linear-gradient(145deg,#0b0c1b 0%,#24163f 55%,#51205d 100%);
+}
+.perks-value-section .photo-panel p,
+.perks-value-section .photo-panel.alt p{
+  color:#d9dbea;
+}
+.perks-value-section{
+  background:linear-gradient(145deg,#ece9e5 0%,#e4e7ed 100%);
+}
+.perks-value-section .photo-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
 /* Responsive footer */
 @media(max-width:900px){
   .footer{padding:58px 0 30px}
@@ -361,4 +391,20 @@
   .perks-stats-section .heading-row>p{width:100%;max-width:none}
   .perks-how-section .heading-row{display:grid;grid-template-columns:1fr;align-items:start;gap:24px}
   .perks-how-section .heading-row .button-white{width:max-content}
+  .perks-brand-section .heading-row{display:grid;grid-template-columns:1fr;align-items:start;gap:24px}
+  .perks-brand-section .heading-row .button-outline{width:max-content}
+  .perks-vote-panel{display:grid;grid-template-columns:1fr;align-items:start;min-height:0;padding:clamp(24px,4vw,34px)}
+  .perks-vote-panel .copy{display:contents}
+  .perks-vote-panel .kicker{grid-row:1}
+  .perks-vote-panel h3{grid-row:2;max-width:650px}
+  .perks-vote-panel>img{grid-row:3;position:relative;right:auto;bottom:auto;justify-self:center;width:min(62%,300px);height:auto;max-width:100%;max-height:520px;margin:12px auto 24px;object-fit:contain}
+  .perks-vote-panel .copy p{grid-row:4;max-width:none;margin:0}
+  .perks-value-section .photo-grid{grid-template-columns:1fr}
+  .perks-app-stage>img{
+    width:min(72%,420px);
+    max-width:100%;
+    max-height:520px;
+    margin:0 auto 24px;
+    object-fit:contain;
+  }
 }
