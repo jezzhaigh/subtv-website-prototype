@@ -335,6 +335,72 @@
   border-radius:18px;
   overflow:hidden;
 }
+.brand-filter-tabs .tab{
+  appearance:none;
+  border:0;
+  font:inherit;
+  cursor:pointer;
+  transition:background-color .18s ease,color .18s ease,transform .18s ease;
+}
+.brand-filter-tabs .tab:hover{
+  transform:translateY(-1px);
+}
+.brand-filter-tabs .tab:focus-visible{
+  outline:3px solid rgba(66,199,255,.45);
+  outline-offset:3px;
+}
+.brand-results-meta{
+  display:flex;
+  justify-content:flex-end;
+  margin:-22px 0 18px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.brand-pagination{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:34px;
+}
+.brand-pagination[hidden]{
+  display:none;
+}
+.brand-pagination button{
+  appearance:none;
+  min-width:42px;
+  min-height:42px;
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+  font-size:13px;
+  font-weight:900;
+  cursor:pointer;
+}
+.brand-pagination button.active{
+  border-color:var(--ink);
+  background:var(--ink);
+  color:#fff;
+}
+.brand-pagination button:disabled{
+  cursor:not-allowed;
+  opacity:.4;
+}
+.brand-pagination button:focus-visible{
+  outline:3px solid rgba(66,199,255,.45);
+  outline-offset:3px;
+}
+.brand-pagination span{
+  color:var(--muted);
+  padding:0 2px;
+}
 .perks-value-section .photo-panel,
 .perks-value-section .photo-panel.alt{
   background:radial-gradient(circle at 82% 18%,rgba(66,199,255,.28),transparent 34%),linear-gradient(145deg,#090c19 0%,#161a36 58%,#172c46 100%);
@@ -393,6 +459,16 @@
   .perks-how-section .heading-row .button-white{width:max-content}
   .perks-brand-section .heading-row{display:grid;grid-template-columns:1fr;align-items:start;gap:24px}
   .perks-brand-section .heading-row .button-outline{width:max-content}
+  .brand-filter-tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding:3px 3px 12px;
+    margin-left:-3px;
+    margin-right:-3px;
+    scrollbar-width:none;
+  }
+  .brand-filter-tabs::-webkit-scrollbar{display:none}
+  .brand-filter-tabs .tab{flex:0 0 auto}
   .perks-vote-panel{display:grid;grid-template-columns:1fr;align-items:start;min-height:0;padding:clamp(24px,4vw,34px)}
   .perks-vote-panel .copy{display:contents}
   .perks-vote-panel .kicker{grid-row:1}
